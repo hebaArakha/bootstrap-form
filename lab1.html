@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+    />
+    <style>
+      /* Custom CSS */
+      .form-check-input:checked {
+        background-color: #dc3545 !important; /* Bootstrap danger color */
+        border-color: #dc3545 !important; /* Bootstrap danger color */
+      }
+    </style>
+  </head>
+  <body>
+    <nav class="navbar bg-light mx-auto w-75">
+      <a class="navbar-brand" href="#">
+        <img src="./download (1).png" width="90" height="60" />
+      </a>
+      <form class="form-inline d-flex flex-row" width="200">
+        <input
+          class="form-control mr-sm-2"
+          type="search"
+          placeholder="Search"
+          aria-label="Search"
+        />
+        <button class="btn btn-danger my-2 my-sm-0" type="submit">
+          Search
+        </button>
+      </form>
+    </nav>
+
+    <form
+      class="form-inline bg-light my-1 border container w-75 border-warning d-flex flex-column justify-content-center was-validated"
+    >
+      <h1 class="m-auto text-center text-danger py-3">SIGN UP</h1>
+
+      <div
+        class="form-floating my-1 mx-auto border w-50 border-warning rounded"
+      >
+        <input
+          type="text"
+          class="form-control"
+          id="floatingInput"
+          placeholder=""
+          required
+        />
+        <label for="floatingInput">First Name :</label>
+      </div>
+
+      <div
+        class="form-floating my-1 mx-auto border w-50 border-warning rounded"
+      >
+        <input
+          type="text"
+          class="form-control"
+          id="floatingInput"
+          placeholder=""
+          required
+        />
+        <label for="floatingInput">Last Name :</label>
+      </div>
+
+      <div
+        class="form-floating my-1 mx-auto border w-50 border-warning rounded"
+      >
+        <input
+          type="password"
+          class="form-control"
+          id="floatingInput"
+          placeholder=""
+          required
+        />
+        <label for="floatingInput">Password :</label>
+      </div>
+
+      <div
+        class="form-floating my-1 mx-auto border w-50 border-warning rounded"
+      >
+        <input
+          type="email"
+          class="form-control"
+          id="floatingInput"
+          placeholder=""
+          required
+        />
+        <label for="floatingInput">Email :</label>
+      </div>
+      <div class="d-flex align-items-center w-75 my-3 mx-auto">
+        <div class="form-check form-check-inline mx-auto">
+          <input
+            class="form-check-input"
+            type="radio"
+            name="gender"
+            id="Female"
+            value="female"
+            checked
+          />
+          <label class="form-check-label" for="Female"> Female </label>
+        </div>
+        <div class="form-check form-check-inline mx-auto">
+          <input
+            class="form-check-input"
+            type="radio"
+            name="gender"
+            id="Male"
+            value="male"
+          />
+          <label class="form-check-label" for="Male"> Male </label>
+        </div>
+      </div>
+
+      <div class="form-check w-50 mx-auto px-5">
+        <input
+          class="form-check-input"
+          type="checkbox"
+          value=""
+          id="flexCheckChecked"
+          required
+        />
+        <label class="form-check-label" for="flexCheckChecked">
+          I Agree To Terms Of Policy
+        </label>
+      </div>
+      <button type="submit" class="btn btn-danger m-3 w-50 text-center mx-auto">
+        Submit
+      </button>
+    </form>
+    <script>
+      // Example starter JavaScript for disabling form submissions if there are invalid fields
+      (() => {
+        "use strict";
+
+        // Fetch all the forms we want to apply custom Bootstrap validation styles to
+        const forms = document.querySelectorAll(".needs-validation");
+
+        // Loop over them and prevent submission
+        Array.from(forms).forEach((form) => {
+          form.addEventListener(
+            "submit",
+            (event) => {
+              if (!form.checkValidity()) {
+                event.preventDefault();
+                event.stopPropagation();
+              }
+
+              form.classList.add("was-validated");
+            },
+            false
+          );
+        });
+      })();
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>
